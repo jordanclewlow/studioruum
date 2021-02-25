@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a9b5bf" height="464.0" layoutX="243.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" width="1023.0" />
+      <Button layoutX="1030.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="250.0" text="Back">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Button mnemonicParsing="false" onAction="#goHome" prefHeight="80.0" prefWidth="250.0" text="Home">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Label layoutX="518.0" layoutY="27.0" text="Classruum">
+         <font>
+            <Font name="Segoe UI Semibold" size="64.0" />
+         </font>
+      </Label>
+      <Button layoutX="1089.0" layoutY="248.0" mnemonicParsing="false" onAction="#getClassResources" text="Get Resources">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a9b5bf" height="589.0" layoutX="14.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="212.0" />
+      <VBox fx:id="classbox" layoutX="24.0" layoutY="118.0" prefHeight="589.0" prefWidth="198.0" spacing="8.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label text="Classruums:">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="262.0" layoutY="314.0" prefHeight="381.0" prefWidth="993.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></VBox>
+      <TextFlow layoutX="250.0" layoutY="185.0" prefHeight="44.0" prefWidth="753.0" textAlignment="CENTER">
+         <children>
+            <Label fx:id="className" text="classruum title" visible="false">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </TextFlow>
+      <Label fx:id="added" layoutX="1150.0" layoutY="550.0" prefHeight="35.0" prefWidth="96.0" text="Resources Added!" visible="false" />
+      <Label layoutX="266.0" layoutY="254.0" prefHeight="35.0" prefWidth="385.0" text="Educators Resource Description:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="description" blendMode="COLOR_BURN" editable="false" layoutX="262.0" layoutY="314.0" prefHeight="381.0" prefWidth="993.0" text="&#10;" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

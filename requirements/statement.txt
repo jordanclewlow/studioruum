@@ -1,0 +1,8 @@
+MISSION STATEMENT
+-----------------
+
+We aim to produce a comprehensive learning application that can help with the study of various different topics, 
+both academic and personal (eg. Learning university modules or foreign languages). Our system will revolve around 
+scholars (the general user) and educators (users with more capabilities to share material with groups) who can both 
+create flashcards, notes, dictionaries and other types of content to aid in the learning process, which can be 
+reviewed in various different ways.

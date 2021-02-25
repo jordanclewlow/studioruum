@@ -1,0 +1,103 @@
+create table users(
+  username varchar(32) NOT NULL,
+  email varchar(50) NOT NULL,
+  password varchar(128) NOT NULL,
+  time_created time,
+  time VARCHAR(15),
+  primary key(username, email)
+);
+
+create table scholars(
+  scholar_id int NOT NULL auto_increment,
+  username varchar(32) NOT NULL,
+  primary key(scholar_id),
+  foreign key(username) references users(username)
+);
+
+create table educators(
+  educator_id int NOT NULL auto_increment,
+  username varchar(32) NOT NULL,
+  primary key(educator_id),
+  foreign key(username) references users(username)
+);
+
+create table classruums(
+  class_id int NOT NULL auto_increment,
+  educator_id int NOT NULL,
+  class_name varchar(128) NOT NULL,
+  primary key(class_id),
+  foreign key(educator_id) references educators(educator_id)
+);
+
+create table classruum_scholars(
+  class_id int NOT NULL,
+  scholar_id int NOT NULL,
+  foreign key(class_id) references classruums(class_id),
+  foreign key(scholar_id) references scholars(scholar_id)
+);
+
+create table resources(
+  resource_id int NOT NULL auto_increment,
+  username varchar(32) NOT NULL,
+  time_updated time,
+  primary key(resource_id),
+  foreign key(username) references users(username)
+);
+
+create table flashcards(
+  flashcard_id int NOT NULL auto_increment,
+  resource_id int NOT NULL,
+  dictionary_id int NOT NULL,
+  quiz_id int,
+  front_content varchar(255) NOT NULL,
+  back_content varchar(255) NOT NULL,
+  primary key(flashcard_id),
+  foreign key(resource_id) references resources(resource_id),
+  foreign key(dictionary_id) references dictionaries(dictionary_id),
+  foreign key(quiz_id) references quizzes(quiz_id)
+);
+
+create table quizzes(
+  quiz_id int NOT NULL auto_increment,
+  resource_id int NOT NULL,
+  quiz_name varchar(32) NOT NULL,
+  quiz_topic varchar(64),
+  primary key(quiz_id),
+  foreign key(resource_id) references resources(resource_id)
+);
+
+create table dictionaries(
+  dictionary_id int NOT NULL auto_increment,
+  resource_id int NOT NULL,
+  dictionary_name varchar(32) NOT NULL,
+  primary key(dictionary_id),
+  foreign key(resource_id) references resources(resource_id)
+);
+
+create table notes(
+  note_id int NOT NULL auto_increment,
+  resource_id int NOT NULL,
+  note_title varchar(32) NOT NULL,
+  note_content varchar(255) NOT NULL,
+  primary key(note_id),
+  foreign key(resource_id) references resources(resource_id)
+);
+
+create table foruums(
+  forum_id int NOT NULL auto_increment,
+  class_id int NOT NULL,
+  forum_title varchar(64) NOT NULL,
+  primary key(forum_id),
+  foreign key(class_id) references classruums(class_id)
+);
+
+create table comments(
+  comment_id int NOT NULL auto_increment,
+  forum_id int NOT NULL,
+  comment_content varchar(255) NOT NULL,
+  username varchar(32) NOT NULL,
+  time_updated time,
+  primary key(comment_id),
+  foreign key(forum_id) references foruums(forum_id),
+  foreign key(username) references users(username)
+);

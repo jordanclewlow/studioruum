@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <children>
+      <Button mnemonicParsing="false" onAction="#goHome" prefHeight="80.0" prefWidth="250.0" text="Home">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Label layoutX="442.0" layoutY="10.0" text="Foruum">
+         <font>
+            <Font name="Segoe UI Semibold" size="96.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe7d1" height="475.0" layoutX="6.0" layoutY="160.0" stroke="WHITE" strokeType="INSIDE" width="310.0" />
+      <Label layoutX="14.0" layoutY="170.0" prefHeight="17.0" prefWidth="172.0" text="Subjects:">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <VBox layoutX="8.0" layoutY="240.0" prefHeight="423.0" prefWidth="172.0">
+         <children>
+            <Hyperlink fx:id="chemistry" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Chemistry" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="biology" layoutX="10.0" layoutY="10.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Biology" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="physics" layoutX="10.0" layoutY="45.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Physics" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="compsci" layoutX="10.0" layoutY="80.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Computer Science" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="maths" layoutX="10.0" layoutY="115.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Maths" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="english" layoutX="10.0" layoutY="150.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="English" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="rs" layoutX="10.0" layoutY="185.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Religious Studies" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="business" layoutX="10.0" layoutY="220.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Business" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="pe" layoutX="10.0" layoutY="255.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Physical Education" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="history" layoutX="10.0" layoutY="290.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="History" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="geography" layoutX="10.0" layoutY="325.0" onAction="#goForuumRelatedPage" prefHeight="23.0" prefWidth="172.0" text="Geography" textFill="#030303">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+         </children></VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe7d1" height="475.0" layoutX="366.0" layoutY="159.0" stroke="WHITE" strokeType="INSIDE" width="900.0" />
+      <Label fx:id="forumTitle" layoutX="381.0" layoutY="170.0" prefHeight="55.0" prefWidth="172.0">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="commentContext" layoutX="381.0" layoutY="256.0" opacity="0.0" prefHeight="101.0" prefWidth="877.0" promptText="Your comment..." />
+      <Button fx:id="submitComment" layoutX="381.0" layoutY="568.0" mnemonicParsing="false" onAction="#goForuumRelatedPage" opacity="0.0" prefHeight="55.0" prefWidth="132.0" text="Comment" />
+      <ComboBox fx:id="commentsComboBox" layoutX="595.0" layoutY="170.0" opacity="0.0" prefHeight="55.0" prefWidth="663.0" promptText="Comments" visibleRowCount="20" />
+   </children>
+</AnchorPane>

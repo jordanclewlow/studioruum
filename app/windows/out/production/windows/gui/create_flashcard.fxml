@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="308.0" layoutY="32.0" prefHeight="64.0" prefWidth="664.0" text="Flashcards">
+         <font>
+            <Font name="Segoe UI Semibold" size="55.0" />
+         </font></Label>
+      <Label fx:id="flashOp" layoutX="13.0" layoutY="681.0" prefHeight="25.0" prefWidth="260.0" text="" visible="false" />
+      <Label fx:id="dictId" layoutX="1017.0" layoutY="676.0" prefHeight="39.0" prefWidth="250.0" text="" visible="false" />
+      <Label fx:id="flashId" layoutX="432.0" layoutY="665.0" prefHeight="39.0" prefWidth="118.0" text="" visible="false" />
+      <Button layoutX="1030.0" mnemonicParsing="false" onAction="#goFlashcard" prefHeight="80.0" prefWidth="250.0" text="Back">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Button mnemonicParsing="false" onAction="#goHome" prefHeight="80.0" prefWidth="250.0" text="Home">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <TextArea fx:id="frontArea" layoutX="14.0" layoutY="137.0" prefHeight="499.0" prefWidth="622.0" promptText="Front" />
+      <TextArea fx:id="backArea" layoutX="657.0" layoutY="137.0" prefHeight="499.0" prefWidth="609.0" promptText="Back" />
+      <Button layoutX="565.0" layoutY="646.0" mnemonicParsing="false" onAction="#saveFlash" prefHeight="40.0" prefWidth="150.0" text="Save">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
